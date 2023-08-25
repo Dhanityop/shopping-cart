@@ -11,7 +11,7 @@ html, body {
     display: flex;
     flex-direction: column;
     max-width: 320px;
-    margin: 50px auto;
+    margin: 30px auto;
 }
 
 .hero {
@@ -20,12 +20,12 @@ html, body {
 }
 
 .hero-img {
-    width: 200px;
+    width: 180px;
     margin: 0 auto;
 }
 
 .empty-img {
-    width: 200px;
+    width: 180px;
     margin: 20px auto 0 auto;
 }
 
