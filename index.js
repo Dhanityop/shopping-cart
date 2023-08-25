@@ -28,7 +28,7 @@ const emptyImg = [
 ]
 
 window.onload = function() {
-    hero.innerHTML = `<img class="hero-img" src="${heroImg[getRandomNumber(heroImg)]}">`
+    hero.innerHTML = `<img class="hero-img" src="${getHeroImg()}">`
 }
 
 addButtonEl.addEventListener("click", function() {
@@ -54,7 +54,7 @@ onValue(shoppingListInDB, function(snapshot) {
         }    
     } else {
         shoppingListEl.innerHTML = `
-            <img class="empty-img" src="${emptyImg[getRandomNumber(emptyImg)]}">
+            <img class="empty-img" src="${getEmptyImg()}">
             <p class="no-item">No items here... yet</p>
         `
     }
@@ -88,4 +88,14 @@ function appendItemToShoppingListEl(item) {
 function getRandomNumber(img) {
     let randomNumber = Math.floor(Math.random() * img.length)
     return randomNumber
+}
+
+function getEmptyImg() {
+    let getEmpty = emptyImg[getRandomNumber(emptyImg)]
+    return getEmpty
+}
+
+function getHeroImg() {
+    let getHero = heroImg[getRandomNumber(heroImg)]
+    return getHero
 }
