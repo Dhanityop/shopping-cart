@@ -28,7 +28,8 @@ const emptyImg = [
 ]
 
 window.onload = function() {
-    hero.innerHTML = `<img class="hero-img" src="${getHeroImg()}">`
+    // hero.innerHTML = `<img class="hero-img" src="${getHeroImg()}">`
+    hero.innerHTML = `<img class="hero-img" src="/assets/hero1.png">`
 }
 
 addButtonEl.addEventListener("click", function() {
@@ -53,10 +54,14 @@ onValue(shoppingListInDB, function(snapshot) {
             appendItemToShoppingListEl(currentItem)
         }    
     } else {
-        shoppingListEl.innerHTML = `
-            <img class="empty-img" src="${getEmptyImg()}">
-            <p class="no-item">No items here... yet</p>
-        `
+        shoppingListEl.innerHTML = 
+        // `
+        //     <img class="empty-img" src="${getEmptyImg()}">
+        //     <p class="no-item">No items here... yet</p>
+        // `
+        `<img class="empty-img" src="/assets/empty3.png">
+        <p class="no-item">No items here... yet</p>`
+
     }
 })
 
